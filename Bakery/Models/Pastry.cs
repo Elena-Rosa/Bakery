@@ -15,7 +15,7 @@ namespace Bakery.Models;
             return 0;
         }       
         int Total = Price * Quantity;
-        int Free = Quantity / 4;
+        int Free = Quantity / 3;
         Total -= Free * Price;
         return Total;
     }
