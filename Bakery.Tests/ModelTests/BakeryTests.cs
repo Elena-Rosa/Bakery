@@ -32,5 +32,11 @@ namespace Bakery.Tests
         Bread newBread = new Bread();
         Assert.AreEqual(0, newBread.calculateTotal(0));
     }
+     [TestMethod]
+    public void BreadCalculateTotal_ReturnTotalQuantity1_5()
+     {
+        Bread newBread = new Bread();
+        Assert.AreEqual(5, newBread.calculateTotal(1));
+    }
  }
 } 
