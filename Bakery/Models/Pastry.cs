@@ -10,6 +10,15 @@ namespace Bakery.Models;
      {
       Price = 2;
      }
+      public int calculateTotal(int Quantity){
+        if (Quantity <= 0){
+            return 0;
+        }       
+        int Total = Price * Quantity;
+        int Free = Quantity / 4;
+        Total -= Free * Price;
+        return Total;
+    }
   }
   
   

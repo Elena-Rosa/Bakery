@@ -19,5 +19,11 @@ namespace Bakery.Tests
         Pastry newPastry = new Pastry();
         Assert.AreEqual(2, newPastry.Price);
     }
+    [TestMethod]
+    public void PastryCalculateTotal_ReturnTotalQuantityZero_0()
+     {
+        Pastry newPastry = new Pastry();
+        Assert.AreEqual(0, newPastry.calculateTotal(0));
+    }
  }
 } 
