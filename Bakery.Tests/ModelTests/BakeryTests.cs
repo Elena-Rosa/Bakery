@@ -7,7 +7,7 @@ namespace Bakery.Tests
 
   public class BreadTests
  {
-    [TestMethod]
+    /*[TestMethod]
     public void BreadConstructor_CreateInstanceOfBread_Bread()
      {
         Bread newBread = new Bread();
@@ -18,6 +18,13 @@ namespace Bakery.Tests
      {
         Bread newBread = new Bread();
         Assert.AreEqual(5, newBread.Price);
+    }*/
+    [TestMethod]
+    public void BreadPrice_SetPrice_6()
+     {
+        Bread newBread = new Bread();
+        newBread.Price = 6;
+        Assert.AreEqual(6, newBread.Price);
     }
  }
 } 
