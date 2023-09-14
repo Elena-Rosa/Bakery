@@ -10,27 +10,21 @@ namespace Bakery
     {
      Console.WriteLine("WELCOME TO OUR BAKERY!");
      Console.WriteLine("Bread $5! Buy two get one free!");
-     Console.WriteLine("Pastries $3! Buy three get one free!");
+     Console.WriteLine("Pastries $2! Buy three get one free!");
 
-     Console.WriteLine("\nPlease choose 1 for Bread or 2 for Pastry:");
-     int choice = int.Parse(Console.ReadLine());
-     Console.WriteLine("Please enter quantity:");
-     int quantity = int.Parse(Console.ReadLine());
-     
+     Console.WriteLine("Please enter the number of loaves of bread you'd like");
+     int loafCount = int.Parse(Console.ReadLine());
+     Console.WriteLine("Please enter the number of pastries you'd like");
+     int pastryCount = int.Parse(Console.ReadLine());
+
      int total = 0;
-     if(choice == 1){
-        Bread bread = new Bread();
-        total = bread.calculateTotal(quantity);
-        Console.WriteLine("\nYour total is $" + total);
-     } 
-     else if(choice == 2){
-        Pastry pastry = new Pastry();
-        total = pastry.calculateTotal(quantity);
-        Console.WriteLine("\nYour total is $" + total);
-     } 
-     else {
-        Console.WriteLine("Invalid choice");
-     }
-    }   
+     Bread bread = new Bread();
+     total += bread.calculateTotal(loafCount);
+     Pastry pastry = new Pastry();
+     total += pastry.calculateTotal(pastryCount);
+
+     Console.WriteLine($"Your total is: ${total}");
+   }   
   }
 }
+
